@@ -19,3 +19,10 @@ else{
     })
 
 }
+
+fs.readFile("../streams/text.txt",{encoding:"utf8"},(err,data)=>{
+    if(err){
+        console.log(err)
+    }
+    console.log(data)
+})
