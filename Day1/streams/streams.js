@@ -1,0 +1,10 @@
+const fs=require("fs")
+const readStream=fs.createReadStream("./text.txt",{encoding:'utf-8'})
+const writeStream=fs.createWriteStream("./text1.txt")
+// readStream.on('data',(chunk)=>{
+//     console.log("----new chunk----")
+//     writeStream.write("\n---NEW CHUNK---\n")
+//     writeStream.write(chunk)
+//     console.log(chunk)
+// })
+readStream.pipe(writeStream)
